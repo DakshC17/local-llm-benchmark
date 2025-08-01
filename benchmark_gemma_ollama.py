@@ -29,7 +29,9 @@ def benchmark_gemma_ollama():
     print(f"Elapsed time: {elapsed_time:.2f} seconds")
     print(f"Number of tokens in answer: {num_tokens}")
     if elapsed_time > 0:
-        print(f"Approximate speed: {num_tokens / elapsed_time:.2f} tokens/sec")
+        tokens_per_sec = num_tokens / elapsed_time
+        tokens_per_min = tokens_per_sec * 60
+        print(f"Approximate speed: {tokens_per_sec:.2f} tokens/sec ({tokens_per_min:.2f} tokens/minute)")
 
 if __name__ == "__main__":
     benchmark_gemma_ollama()
