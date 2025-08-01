@@ -29,7 +29,7 @@ assignment goal:
 
 ---
 
-##  What we built
+##  (1)What we built
 
 We created:
 -  A **speed & memory benchmark** using PyTorch
@@ -58,10 +58,57 @@ python benchmark_gemma_ollama.py
 ##  Example output
 
 Output shows:
+ 
 
 - **Elapsed time:** ~36 seconds
 - **Number of tokens:** 61
 - **Approximate speed:** ~1.69 tokens/sec (~101 tokens/min)
+
+
+
+---
+
+##  (2)What we built
+
+We created:
+-  A **speed & memory benchmark** using PyTorch
+-  A **Qwen 2.5 benchmark script** using Ollama to measure:
+  - Elapsed time
+  - Number of tokens in answer
+  - Speed in tokens/sec
+  - Tokens per minute (tpm)
+
+---
+
+##  Running the benchmarks
+
+Make sure you have Ollama installed and have pulled the models:
+
+```bash
+ollama pull qwen2.5
+```
+
+Then run the script:
+
+```bash
+python benchmark_qwen_ollama.py
+```
+
+##  Example output
+
+ **Qwen 2.5**
+
+
+- **Elapsed time:** ~34.20 seconds
+- **Number of tokens in answer:** 29
+- **Approximate speed:** ~0.85 tokens/sec (~50.88 tokens/min)
+
+>  We're benchmarking using the same single prompt to compare latency & speed consistently across local models.
+
+
+
+
+
 
 ##  Metrics explained
 
