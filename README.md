@@ -1,4 +1,4 @@
-# 🚀 local-llm-benchmark
+# local-llm-benchmark
 
 lightweight benchmarking tool to evaluate and compare local Large Language Models (LLMs)..
 
@@ -14,7 +14,67 @@ It helps measure speed, memory usage, and performance of LLMs running locally.
 
 ---
 
-## � Installation
+
+---
+
+##  Why we used Ollama
+
+We decided to use **Ollama** because it allows us to:
+- Run open-source LLMs locally (like Gemma, Qwen, Llama3) **without downloading & managing heavy models manually**.
+- Test latency, speed and memory on real hardware (my NVIDIA GPU).
+- Get quick results for prototyping and benchmarking.
+
+assignment goal:  
+> *"To determine whether it's beneficial to run local models, and measure latency (tpm) and resource usage."*
+
+---
+
+##  What we built
+
+We created:
+-  A **speed & memory benchmark** using PyTorch
+-  A **Gemma 2B benchmark script** using Ollama to measure:
+  - Elapsed time
+  - Number of tokens in answer
+  - Speed in tokens/sec
+  - Tokens per minute (tpm)
+
+---
+
+##  Running the benchmark
+
+Make sure you have Ollama installed and have pulled Gemma 2B:
+
+```bash
+ollama pull gemma:2b
+```
+
+Then run:
+
+```bash
+python benchmark_gemma_ollama.py
+```
+
+##  Example output
+
+Output shows:
+
+- **Elapsed time:** ~36 seconds
+- **Number of tokens:** 61
+- **Approximate speed:** ~1.69 tokens/sec (~101 tokens/min)
+
+##  Metrics explained
+
+Metric :  What it means 
+
+ Elapsed time :  Total time taken to generate answer 
+ Tokens : Number of words/tokens in answer 
+ tokens/sec : Speed at which model generated tokens 
+ tpm : Tokens per minute (tokens/sec × 60) — approximate latency as per assignment 
+
+---
+
+## 📦 Installation
 
 ```bash
 # Clone the repository
