@@ -1,4 +1,3 @@
-
 import torch
 import time
 
@@ -12,6 +11,7 @@ def dummy_benchmark():
     if torch.cuda.is_available():
         device = torch.device("cuda")
         print(f"Using device: {torch.cuda.get_device_name(0)}")
+        torch.cuda.reset_peak_memory_stats(device)  # Reset memory stats before benchmark
     else:
         device = torch.device("cpu")
         print("CUDA not available, using CPU.")
@@ -29,6 +29,11 @@ def dummy_benchmark():
     elapsed_time = time.time() - start_time
 
     print(f"Benchmark complete! Elapsed time: {elapsed_time:.2f} seconds")
+
+    # Reporting peak GPU memory used (only if on GPU)
+    if device.type == "cuda":
+        peak_memory = torch.cuda.max_memory_allocated(device) / (1024 ** 2)  # Convert to MB
+        print(f"Peak GPU memory allocated: {peak_memory:.2f} MB")
 
 if __name__ == "__main__":
     dummy_benchmark()
