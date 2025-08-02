@@ -178,6 +178,40 @@ pip install -r requirements.txt
 - PyTorch 2.5.1+cu121
 - See full list in `requirements.txt`
 
+
+##  Project Summary
+
+**Made a benchmarking tool that:**
+
+- Tests three open-source local LLMs (Gemma 2B, Qwen 2.5, Llama 3.1 8B)
+- Runs them locally using Ollama (lightweight, avoids heavy manual setup)
+- Measures:
+  - Elapsed time (latency)
+  - Number of tokens
+  - Tokens/sec
+  - Tokens/minute (≈ tpm)
+
+**Wrote clean Python scripts:**
+
+- `benchmark_gemma_ollama.py`
+- `benchmark_qwen_ollama.py`
+- `benchmark_llama_ollama.py`
+
+**Added:**
+
+- Good README with:
+  - Installation
+  - Why local LLMs
+  - How to run each benchmark
+  - Example outputs with screenshots
+- `requirements.txt`
+
+**Used efficient approach:**
+
+- Each script only runs once, sends a small prompt → keeps resources low
+- You compared speed & latency between models → this answers "which models can your machine run & at what speed".
+
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
