@@ -216,6 +216,9 @@ pip install -r requirements.txt
 
 After benchmarking three local LLMs on the same machine using **Ollama**, we compared their latency and generation speed.
 
+![Benchmark Results Comparison](images/Comparison.png)
+
+
 
 
 ## ✏ **Conclusion**
