@@ -210,6 +210,27 @@ pip install -r requirements.txt
 
 - Each script only runs once, sends a small prompt → keeps resources low
 - You compared speed & latency between models → this answers "which models can your machine run & at what speed".
+---
+
+##  **Final Summary & Comparison**
+
+After benchmarking three local LLMs on the same machine using **Ollama**, we compared their latency and generation speed.
+
+
+
+## ✏ **Conclusion**
+
+- ✅ **Gemma 2B** showed the **fastest generation speed** and highest tokens per minute (tpm), making it the most responsive on local hardware.
+- 🐉 **Qwen 2.5** had slightly lower elapsed time but produced fewer tokens, leading to lower overall speed.
+- 🦙 **Llama 3.1 8B** took the longest time and had the slowest generation speed due to its larger size and resource demands.
+
+These results show the trade-offs between speed, latency, and model size.  
+Running such local benchmarks helps decide if running models locally is beneficial compared to cloud inference.
+
+> 📦 *This completes the GOAL :*  
+> We benchmarked open-source models locally, measured latency & tpm, and documented results to evaluate local deployment benefits.
+
+---
 
 
 ## 📄 License
