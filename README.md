@@ -64,6 +64,9 @@ Output shows:
 - **Number of tokens:** 61
 - **Approximate speed:** ~1.69 tokens/sec (~101 tokens/min)
 
+![Benchmark Result(Gemma 2B)](images/gemma_test_output.png)
+
+
 
 
 ---
@@ -103,6 +106,9 @@ python benchmark_qwen_ollama.py
 - **Number of tokens in answer:** 29
 - **Approximate speed:** ~0.85 tokens/sec (~50.88 tokens/min)
 
+![Benchmark Result(Qwen 2.5)](images/qwen_test_output.png)
+
+
 >  We're benchmarking using the same single prompt to compare latency & speed consistently across local models.
 
 
@@ -139,6 +145,10 @@ Output shows:
 - **Elapsed time:** ~112 seconds
 - **Number of tokens:** 44
 - **Approximate speed:** ~0.39 tokens/sec (~23 tokens/minute)
+
+
+![Benchmark Result(Llama 3.1 8B)](images/llama_test_output.png)
+
 
 ---
 
