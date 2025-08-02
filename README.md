@@ -71,7 +71,7 @@ Output shows:
 
 ---
 
-## Benchmark : Qwen2.5 (via ollama)
+## (2)Benchmark : Qwen2.5 (via ollama)
 
 We created:
 -  A **speed & memory benchmark** using PyTorch
@@ -114,7 +114,7 @@ python benchmark_qwen_ollama.py
 
 ---
 
-## Benchmark: Llama 3.1 8B (via Ollama)
+## (3)Benchmark: Llama 3.1 8B (via Ollama)
 
 We created:
 
