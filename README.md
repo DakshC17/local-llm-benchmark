@@ -244,7 +244,17 @@ Running such local benchmarks helps decide if running models locally is benefici
 > We benchmarked open-source models locally, measured latency & tpm, and documented results to evaluate local deployment benefits.
 
 ---
+## Production Enhancements (will work on it soon)
 
+1. Averaging multiple runs
+
+2. Unified benchmarking
+
+3. Optional CPU/memory logging
+
+4. CLI interface
+
+5. Json /CSV logging
 
 ## 📄 License
 
