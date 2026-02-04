@@ -3,7 +3,6 @@
 lightweight benchmarking tool to evaluate and compare local Large Language Models (LLMs)..
 
 It helps measure speed, memory usage, and performance of LLMs running locally.
-
 ---
 
 ## Features
